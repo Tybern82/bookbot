@@ -10,3 +10,13 @@ def count_characters(text):
         else:
             char_counts[ch] += 1
     return char_counts
+
+def charsorter(items):
+    return items["num"]
+
+def sorted_characters(char_counts):
+    unsorted_counts = []
+    for ch in char_counts:
+        unsorted_counts.append({"char": ch, "num": char_counts[ch]})
+    unsorted_counts.sort(reverse=True, key=charsorter)
+    return unsorted_counts
